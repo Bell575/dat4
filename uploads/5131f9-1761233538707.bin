@@ -1,0 +1,28 @@
+/*
+Wm: https://whatsapp.com/channel/0029VaF9C4zId7nOTFF8ZK0v
+Jgn hapus wm ku
+Fitur: Nsfw Hentai 
+Type : case
+Api: https://api.nekolabs.my.id/
+*/
+
+case 'nsfwhentai': {
+            if (!isLimit) return m.reply(mess.limit)
+            if (m.isGroup) return m.reply(mess.private)
+            //if (!isPremium) return m.reply(mess.prem)
+            
+            let caption = `Om Jangan Sangean`
+            
+            await conn.sendMessage(m.chat, {
+    image: { url: `https://api.nekolabs.my.id/random/nsfwhub/hentai` },
+    gifPlayback: true,
+    caption,
+    footer: 'ᴹᴿ᭄༺DJ BOTZོ - MDོ ×፝֟͜×༻ - 2025',
+    buttons: [
+                { buttonId: `${prefix + command}`, buttonText: { displayText: 'NEXT' }, type: 1 }
+            ],
+            headerType: 1,
+    viewOnce: true
+  }, { quoted: m })
+            }
+        break
